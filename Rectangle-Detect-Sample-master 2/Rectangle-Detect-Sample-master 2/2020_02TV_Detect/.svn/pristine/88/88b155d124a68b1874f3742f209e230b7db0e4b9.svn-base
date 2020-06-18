@@ -1,0 +1,11 @@
+.DS_Store
+.localized
+xcuserdata/
+*.xcworkspace/
+*.perspectivev3
+*.pbxuser
+output
+Export/
+fastlane/report.xml
+fastlane/README.md
+Carthage/

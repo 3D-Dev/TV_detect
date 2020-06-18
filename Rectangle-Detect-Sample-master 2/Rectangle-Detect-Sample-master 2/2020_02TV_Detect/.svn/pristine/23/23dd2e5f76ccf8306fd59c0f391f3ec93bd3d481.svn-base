@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ue2-az-qbc">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="T3s-Va-b4l">
+            <objects>
+                <navigationController id="ue2-az-qbc" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bJ0-0J-W7Q">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="vwA-rr-GgJ" kind="relationship" relationship="rootViewController" id="83l-RU-DOn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Hr-It-4Rs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1749" y="69"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="Vqk-ck-g5o">
+            <objects>
+                <viewController id="vwA-rr-GgJ" customClass="MainViewController" customModule="RectangleDetection_coreImage" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JlP-bK-VMt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="hKh-Qo-wuv">
+                                <rect key="frame" x="20" y="383.5" width="374" height="129"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Aj-Ft-QN2">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="54.5"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="Open Camera">
+                                            <color key="titleColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="OpenCameraAction:" destination="vwA-rr-GgJ" eventType="touchUpInside" id="4fo-ZQ-JbY"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dvu-9w-ePI">
+                                        <rect key="frame" x="0.0" y="74.5" width="374" height="54.5"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="Open Album">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="OpenAlbumAction:" destination="vwA-rr-GgJ" eventType="touchUpInside" id="tC0-lI-5u7"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="D2E-TL-12B" firstAttribute="trailing" secondItem="hKh-Qo-wuv" secondAttribute="trailing" constant="20" id="3Hq-6b-6pG"/>
+                            <constraint firstItem="hKh-Qo-wuv" firstAttribute="leading" secondItem="D2E-TL-12B" secondAttribute="leading" constant="20" id="E8g-cY-iJw"/>
+                            <constraint firstItem="hKh-Qo-wuv" firstAttribute="height" secondItem="D2E-TL-12B" secondAttribute="height" multiplier="1/6" id="cva-R7-iAv"/>
+                            <constraint firstItem="hKh-Qo-wuv" firstAttribute="centerY" secondItem="JlP-bK-VMt" secondAttribute="centerY" id="hLU-q6-TlW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="D2E-TL-12B"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="HWH-48-6TR"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ALX-qr-rnW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-929" y="69"/>
+        </scene>
+    </scenes>
+</document>
